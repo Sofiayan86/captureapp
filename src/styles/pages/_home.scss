@@ -1,0 +1,145 @@
+/* Home page styles */
+
+.hero {
+  padding: $spacing-xl * 2 0;
+  background: linear-gradient(135deg, $secondary, color.adjust($secondary, $lightness: -10%));
+  color: white;
+  position: relative;
+  overflow: hidden;
+  
+  @include media-breakpoint-down(md) {
+    padding: $spacing-xl 0;
+  }
+  
+  &__content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  &__headline {
+    @include heading-1;
+    margin-bottom: $spacing-lg;
+  }
+  
+  &__subheadline {
+    font-size: 1.25rem;
+    margin-bottom: $spacing-xl;
+    max-width: 600px;
+    line-height: 1.5;
+    
+    @include media-breakpoint-up(md) {
+      font-size: 1.5rem;
+    }
+  }
+  
+  &__cta {
+    @include button-primary;
+    margin-right: $spacing-md;
+    
+    &--secondary {
+      @include button-outline;
+      color: white;
+      border-color: white;
+      
+      &:hover {
+        background-color: rgba(white, 0.1);
+      }
+    }
+  }
+  
+  &__background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url('../assets/hero-bg.svg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: 1;
+  }
+}
+
+.features {
+  padding: $spacing-xl * 1.5 0;
+  
+  &__title {
+    text-align: center;
+    margin-bottom: $spacing-xl;
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+    
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  &__card {
+    padding: $spacing-lg;
+    border-radius: $border-radius-lg;
+    background-color: white;
+    box-shadow: $shadow-md;
+    transition: $transition-base;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: $shadow-lg;
+    }
+    
+    &-icon {
+      width: 64px;
+      height: 64px;
+      margin-bottom: $spacing-md;
+    }
+    
+    &-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: $spacing-sm;
+    }
+    
+    &-description {
+      color: lighten($text, 20%);
+      line-height: 1.6;
+    }
+  }
+}
+
+.partners {
+  padding: $spacing-xl 0;
+  background-color: rgba($secondary, 0.05);
+  
+  &__title {
+    text-align: center;
+    margin-bottom: $spacing-xl;
+  }
+  
+  &__logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing-xl;
+    
+    img {
+      max-height: 40px;
+      filter: grayscale(100%);
+      opacity: 0.7;
+      transition: $transition-base;
+      
+      &:hover {
+        filter: grayscale(0);
+        opacity: 1;
+      }
+    }
+  }
+}

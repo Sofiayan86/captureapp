@@ -1,0 +1,135 @@
+/* Typography styles for Capture App */
+
+// Headings
+h1 {
+  @include heading-1;
+}
+
+h2 {
+  @include heading-2;
+}
+
+h3 {
+  @include heading-3;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+// Paragraphs
+p {
+  margin-bottom: $spacing-md;
+}
+
+// Links
+a {
+  color: $primary;
+  transition: $transition-fast;
+  
+  &:hover {
+    color: darken($primary, 15%);
+  }
+}
+
+// Lists
+ul, ol {
+  padding-left: $spacing-lg;
+  margin-bottom: $spacing-md;
+}
+
+// Emphasis
+strong, b {
+  font-weight: 600;
+}
+
+em, i {
+  font-style: italic;
+}
+
+// Code
+code, pre {
+  font-family: monospace;
+  background-color: rgba($secondary, 0.05);
+  border-radius: $border-radius-sm;
+}
+
+code {
+  padding: 0.2em 0.4em;
+  font-size: 0.9em;
+}
+
+pre {
+  padding: $spacing-sm;
+  overflow-x: auto;
+  
+  code {
+    background-color: transparent;
+    padding: 0;
+    font-size: 0.9em;
+  }
+}
+
+// Quotes
+blockquote {
+  padding: $spacing-sm $spacing-md;
+  margin-left: 0;
+  margin-right: 0;
+  border-left: 4px solid $primary;
+  background-color: rgba($primary, 0.05);
+  font-style: italic;
+}
+
+// Small text
+small {
+  font-size: 0.875em;
+}
+
+// Text utilities
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+// Text colors
+.text-primary {
+  color: $primary;
+}
+
+.text-secondary {
+  color: $secondary;
+}
+
+.text-accent {
+  color: $accent;
+}

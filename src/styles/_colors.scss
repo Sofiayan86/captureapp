@@ -1,0 +1,44 @@
+/**
+ * Modern color utilities for SCSS
+ * Replacements for deprecated color functions
+ */
+
+@use 'sass:color';
+@use 'variables' as vars;
+
+/// Darken a color by a specified percentage
+/// @param {Color} $color - The color to darken
+/// @param {Number} $amount - Amount to darken (0-100%)
+/// @return {Color} The darkened color
+@function darken($color, $amount) {
+  @return color.scale($color, $lightness: $amount * -1);
+}
+
+/// Lighten a color by a specified percentage
+/// @param {Color} $color - The color to lighten
+/// @param {Number} $amount - Amount to lighten (0-100%)
+/// @return {Color} The lightened color
+@function lighten($color, $amount) {
+  @return color.scale($color, $lightness: $amount);
+}
+
+/// Create a transparent version of a color
+/// @param {Color} $color - The base color
+/// @param {Number} $opacity - Opacity value (0-1)
+/// @return {Color} The color with updated opacity
+@function transparent($color, $opacity) {
+  @return color.adjust($color, $alpha: $opacity * -1);
+}
+
+/// Create a complementary color
+/// @param {Color} $color - The base color
+/// @return {Color} The complementary color
+@function complement($color) {
+  @return color.adjust($color, $hue: 180deg);
+}
+
+// Color palette presets based on primary colors
+$primary-light: lighten(vars.$primary, 20%);
+$primary-dark: darken(vars.$primary, 15%);
+$secondary-light: lighten(vars.$secondary, 30%);
+$secondary-dark: darken(vars.$secondary, 10%);

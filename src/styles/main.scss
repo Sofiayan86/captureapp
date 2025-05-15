@@ -1,0 +1,34 @@
+/**
+ * Capture App - Main SCSS
+ *
+ * This file imports all other SCSS modules and defines global styles.
+ * Updated to use modern SCSS @use/@forward syntax
+ */
+
+// Import core modules
+@use 'sass:math';
+@use 'sass:color';
+
+// Import variables and mixins directly for now
+// This is a simpler approach to fix build issues
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// Import base styles
+@use 'base/normalize';
+@use 'base/typography';
+@use 'base/layout';
+
+// Import component styles
+@use 'components/captureEye';
+@use 'components/webBrain';
+@use 'components/buttons';
+@use 'components/forms';
+
+// Import page-specific styles
+@use 'pages/home';
+@use 'pages/dashboard';
+
+// Import utilities
+@use 'utilities/animations';
+@use 'utilities/helpers';

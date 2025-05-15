@@ -1,0 +1,18 @@
+/**
+ * SCSS Modules - Root file for proper @use/@forward declarations
+ * 
+ * This file uses the modern SCSS module system to properly forward all variables,
+ * functions, and mixins to components while avoiding circular dependencies.
+ */
+
+@use 'sass:math';
+@use 'sass:color';
+
+// Forward all variables
+@forward 'variables';
+
+// Forward mixins
+@forward 'mixins';
+
+// Forward color utilities
+@forward 'colors';

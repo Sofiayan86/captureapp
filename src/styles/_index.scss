@@ -1,0 +1,9 @@
+// This is the central module file for all shared variables and mixins
+// This approach allows us to use the modern @use syntax while avoiding circular dependencies
+
+@use 'sass:color';
+@use 'sass:math';
+
+// Forward all variables and mixins
+@forward 'variables';
+@forward 'mixins';

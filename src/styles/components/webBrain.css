@@ -1,0 +1,134 @@
+/* WebBrain Widget Styles */
+
+.wb-widget-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  font-family: 'Inter', sans-serif;
+}
+
+.wb-widget-button {
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary, #027FE5);
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.wb-widget-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+}
+
+.wb-widget-icon {
+  width: 30px;
+  height: 30px;
+  fill: white;
+}
+
+.wb-chat-window {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  width: 350px;
+  height: 500px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.wb-chat-header {
+  background-color: var(--primary, #027FE5);
+  color: white;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wb-chat-title {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.wb-close-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.wb-messages-container {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.wb-message {
+  margin-bottom: 12px;
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: 18px;
+  line-height: 1.4;
+}
+
+.wb-message-user {
+  background-color: #f0f0f0;
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+}
+
+.wb-message-agent {
+  background-color: #e6f3ff;
+  margin-right: auto;
+  border-bottom-left-radius: 4px;
+}
+
+.wb-input-container {
+  padding: 12px 16px;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  align-items: center;
+}
+
+.wb-message-input {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 8px 16px;
+  outline: none;
+  font-size: 14px;
+}
+
+.wb-send-button {
+  background-color: var(--primary, #027FE5);
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-left: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+  .wb-chat-window {
+    width: 300px;
+    right: -10px;
+  }
+}

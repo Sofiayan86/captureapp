@@ -1,0 +1,141 @@
+/* WebBrain Widget Component Styles */
+
+.wb-widget {
+  $self: &;
+  
+  &-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-family: $font-family-base;
+  }
+  
+  &-button {
+    width: 60px;
+    height: 60px;
+    background-color: $primary;
+    border-radius: $border-radius-full;
+    box-shadow: $shadow-md;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: $transition-base;
+    
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: $shadow-lg;
+    }
+  }
+  
+  &-icon {
+    width: 30px;
+    height: 30px;
+    fill: white;
+  }
+}
+
+.wb-chat {
+  &-window {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    width: 350px;
+    height: 500px;
+    background-color: white;
+    border-radius: $border-radius-lg;
+    box-shadow: $shadow-lg;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: $transition-base;
+    
+    @include media-breakpoint-down(sm) {
+      width: 300px;
+      right: -10px;
+    }
+  }
+  
+  &-header {
+    background-color: $primary;
+    color: white;
+    padding: $spacing-sm $spacing-md;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  &-title {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  
+  &-close {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.25rem;
+  }
+  
+  &-messages {
+    flex: 1;
+    padding: $spacing-md;
+    overflow-y: auto;
+  }
+  
+  &-input {
+    padding: $spacing-sm $spacing-md;
+    border-top: 1px solid #eaeaea;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.wb-message {
+  margin-bottom: $spacing-sm;
+  max-width: 80%;
+  padding: $spacing-xs $spacing-sm;
+  border-radius: $border-radius-md;
+  line-height: 1.4;
+  
+  &-user {
+    background-color: #f0f0f0;
+    margin-left: auto;
+    border-bottom-right-radius: 4px;
+  }
+  
+  &-agent {
+    background-color: rgba($primary, 0.1);
+    margin-right: auto;
+    border-bottom-left-radius: 4px;
+  }
+  
+  &-input {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: $border-radius-full;
+    padding: $spacing-xs $spacing-md;
+    outline: none;
+    font-size: 0.875rem;
+    
+    &:focus {
+      border-color: $primary;
+    }
+  }
+  
+  &-send {
+    background-color: $primary;
+    color: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: $border-radius-full;
+    margin-left: $spacing-xs;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

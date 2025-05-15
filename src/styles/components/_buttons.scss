@@ -1,0 +1,75 @@
+/* Button styles for Capture App */
+
+.btn {
+  @include button-base;
+  
+  &--primary {
+    @include button-primary;
+  }
+  
+  &--secondary {
+    @include button-secondary;
+  }
+  
+  &--outline {
+    @include button-outline;
+  }
+  
+  &--sm {
+    padding: $spacing-xs $spacing-sm;
+    font-size: 0.875rem;
+  }
+  
+  &--lg {
+    padding: $spacing-md $spacing-lg;
+    font-size: 1.125rem;
+  }
+  
+  &--block {
+    display: block;
+    width: 100%;
+  }
+  
+  &--round {
+    border-radius: $border-radius-full;
+  }
+  
+  &--icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-xs;
+    
+    svg, img {
+      width: 1em;
+      height: 1em;
+    }
+  }
+  
+  &:disabled, &.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+/* Button group */
+.btn-group {
+  display: inline-flex;
+  
+  .btn {
+    border-radius: 0;
+    margin-right: -1px;
+    
+    &:first-child {
+      border-top-left-radius: $border-radius-md;
+      border-bottom-left-radius: $border-radius-md;
+    }
+    
+    &:last-child {
+      border-top-right-radius: $border-radius-md;
+      border-bottom-right-radius: $border-radius-md;
+      margin-right: 0;
+    }
+  }
+}

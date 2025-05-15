@@ -1,0 +1,31 @@
+/**
+ * Capture App - Main CSS
+ *
+ * This file imports normalize.css for consistent styling across browsers.
+ */
+
+@import 'normalize.css';
+
+/* Core styles - additional styles are imported in main.scss */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 991px) {
+  /* Tablet styles */
+}
+
+@media screen and (max-width: 767px) {
+  /* Mobile styles */
+}
+
+@media screen and (max-width: 479px) {
+  /* Small mobile styles */
+}

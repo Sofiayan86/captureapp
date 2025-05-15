@@ -1,0 +1,54 @@
+/* CaptureEye Component CSS */
+.captureEye {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.captureEye__icon {
+  width: 24px;
+  height: 24px;
+  fill: #1E1E1E;
+  transition: all 0.3s ease;
+}
+
+.captureEye--active .captureEye__icon {
+  fill: #027FE5;
+}
+
+.captureEye--verified .captureEye__icon {
+  fill: #49E9FF;
+}
+
+.captureEye--verified::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #49E9FF;
+  top: 0;
+  right: 0;
+}
+
+/* Pulse animation */
+@keyframes eyePulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(2, 127, 229, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(2, 127, 229, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(2, 127, 229, 0);
+  }
+}
+
+.captureEye--pulse.captureEye--verified {
+  animation: eyePulse 2s infinite;
+}

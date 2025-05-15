@@ -1,0 +1,140 @@
+// Mixins for Capture App
+@use 'sass:math';
+@use 'sass:color';
+@use 'variables' as *;
+
+// Media query mixins
+@mixin media-breakpoint-up($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: $breakpoint-sm) { @content; }
+  } @else if $breakpoint == md {
+    @media (min-width: $breakpoint-md) { @content; }
+  } @else if $breakpoint == lg {
+    @media (min-width: $breakpoint-lg) { @content; }
+  } @else if $breakpoint == xl {
+    @media (min-width: $breakpoint-xl) { @content; }
+  }
+}
+
+@mixin media-breakpoint-down($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: $breakpoint-sm - 1) { @content; }
+  } @else if $breakpoint == md {
+    @media (max-width: $breakpoint-md - 1) { @content; }
+  } @else if $breakpoint == lg {
+    @media (max-width: $breakpoint-lg - 1) { @content; }
+  } @else if $breakpoint == xl {
+    @media (max-width: $breakpoint-xl - 1) { @content; }
+  }
+}
+
+// Flexbox layout mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Animation mixins
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin animation($animation) {
+  animation: $animation;
+}
+
+// Typography mixins
+@mixin heading-1 {
+  font-family: $font-family-heading;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  
+  @include media-breakpoint-up(md) {
+    font-size: 3rem;
+  }
+}
+
+@mixin heading-2 {
+  font-family: $font-family-heading;
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 600;
+  
+  @include media-breakpoint-up(md) {
+    font-size: 2.5rem;
+  }
+}
+
+@mixin heading-3 {
+  font-family: $font-family-heading;
+  font-size: 1.75rem;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+// Button mixins
+@mixin button-base {
+  display: inline-block;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $border-radius-md;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: $transition-base;
+  border: none;
+  outline: none;
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
+  
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+@mixin button-primary {
+  @include button-base;
+  background-color: $primary;
+  color: white;
+  
+  &:hover {
+    background-color: darken($primary, 10%);
+  }
+}
+
+@mixin button-secondary {
+  @include button-base;
+  background-color: $secondary;
+  color: white;
+  
+  &:hover {
+    background-color: darken($secondary, 10%);
+  }
+}
+
+@mixin button-outline {
+  @include button-base;
+  background-color: transparent;
+  border: 2px solid $primary;
+  color: $primary;
+  
+  &:hover {
+    background-color: rgba($primary, 0.1);
+  }
+}
