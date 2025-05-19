@@ -95,13 +95,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   gtag('js', new Date());
   gtag('config', 'UA-239888277-2');
 </script>
---></head><body class="background-color-black"><div class="global-styles w-embed"><style>
+-->
+
+
+<!-- Add webfonts for Degular and Space Grotesk -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/degular" rel="stylesheet">
+</head><body class="background-color-black"><div class="global-styles w-embed"><style>
 
 /* Make text look crisper and more legible in all browsers */
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  font-family: 'Space Grotesk', Arial, Helvetica, sans-serif;
+  font-weight: 400;
 }
 
 /* Focus state style for keyboard navigation for the focusable elements */
@@ -339,6 +349,60 @@ body { overscroll-behavior: none; }
 .page-wrapper { overflow: clip; }
 .action_bg { pointer-events: none; }
 
+/* Add webfonts for Degular and Space Grotesk */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+
+.brand-studio {
+  font-family: 'Space Grotesk', sans-serif;
+  color: white;
+  background-color: black;
+  padding: 10px;
+  text-align: left;
+}
+
+.world-clock {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+  grid-template-rows: auto auto;
+  gap: 15px;
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: regular;
+}
+
+.time-display {
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 8px;
+  text-align: center;
+  min-width: 80px;
+  min-height: 40px;
+}
+
+/* Adjust the layout for the bottom row */
+.world-clock > .time-display:nth-child(4) {
+  grid-column: 1 / 2; /* Align with the first column */
+}
+
+.world-clock > .time-display:nth-child(5) {
+  grid-column: 2 / 3; /* Align with the third column */
+}
+
+/* Footer styling */
+.footer {
+  margin-top: 30px;
+  text-align: left; /* Aligns the text to the left */
+  font-size: 6px; /* Smaller font size */
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
 </style></div><div data-animation="default" class="navbar9_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" data-w-id="e343666a-b2bd-6bde-60b4-1232bad22e55" role="banner" data-duration="400"><div class="navbar9_container"><a href="/" aria-current="page" class="navbar9_logo-link w-nav-brand w--current"><img src="assets/images/6478a21cf8143d8b5a3c13c2_Capture%20Log.svg" loading="lazy" alt="" class="navbar4_logo"></a><nav role="navigation" class="navbar9_menu w-nav-menu"><div class="navbar9_menu-left"><div data-hover="true" data-delay="300" data-w-id="0392d595-06f2-b308-abd6-b8ffbbdc0a88" class="navbar11_menu-dropdown w-dropdown"><div class="navbar11_dropdown-toggle w-dropdown-toggle"><div class="dropdown-icon w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"></path>
 </svg></div><div class="text-block-11">Products</div></div><nav class="navbar11_dropdown-list w-dropdown-list"><div class="navbar11_dropdown-link-list"><a href="/products/sdk" class="navbar9_dropdown-link w-inline-block"><div class="navbar9_icon-wrapper"><img id="w-node-_5c5a5faa-3d23-c5b2-a404-a84be76f5268-bad22e55" loading="lazy" alt="" src="assets/images/65f809d76875221614106863_capture-sdk-icon.png" class="icon-1x1-small"></div><div class="navbar9_item-text"><div class="text-weight-semibold">Capture SDK</div><p class="text-size-small hide-mobile-landscape">Toolkit for integrating blockchain capabilities into your platforms</p></div></a><a href="/products/eye" class="navbar9_dropdown-link w-inline-block"><div class="navbar9_icon-wrapper"><img id="w-node-f03658c0-986b-3815-d9dc-dd65bb5936e5-bad22e55" loading="lazy" alt="" src="assets/images/6482f9de357e68168ee7f01a_Eye.png" class="icon-1x1-small"></div><div class="navbar9_item-text"><div class="text-weight-semibold">Capture Eye</div><p class="text-size-small hide-mobile-landscape">Integrate a content provenance widget into your website</p></div></a><a href="/products/dashboard" class="navbar9_dropdown-link w-inline-block"><div class="navbar9_icon-wrapper"><img id="w-node-d18d7a13-9c73-41fa-9235-acd962514a44-bad22e55" loading="lazy" alt="" src="assets/images/6482f9bc357e68168ee7c685_Dashboard.png" class="icon-1x1-small"></div><div class="navbar9_item-text"><div class="text-weight-semibold">Capture Dashboard</div><p class="text-size-small hide-mobile-landscape">Free-to-use online tool to create content provenance with ease</p></div></a><a href="/products/camera" class="navbar9_dropdown-link w-inline-block"><div class="navbar9_icon-wrapper"><img id="w-node-_8d423cc5-494a-eace-059d-fe8ef22cef0f-bad22e55" loading="lazy" alt="" src="assets/images/6482f773012033b0029669a2_Cam.png" class="icon-1x1-small"></div><div class="navbar9_item-text"><div class="text-weight-semibold">Capture Cam</div><p class="text-size-small hide-mobile-landscape">Mobile app to register photos & videos into traceable digital assets</p></div></a><a href="/products/c2pa-signing" class="navbar9_dropdown-link w-inline-block"><div class="navbar9_icon-wrapper"><img id="w-node-_78cabd15-8a6d-2f36-bd2f-d2bfb0063fbb-bad22e55" loading="lazy" alt="" src="assets/images/6659b5a212d71d2e0da7af57_cr-icon.png" class="icon-1x1-small"></div><div class="navbar9_item-text"><div class="text-weight-semibold">C2PA Signing</div><p class="text-size-small hide-mobile-landscape">Implement C2PA at scale</p></div></a></div></nav></div><div data-hover="true" data-delay="300" data-w-id="eecddfeb-a56c-563f-b45c-0bb9b3d29733" class="navbar11_menu-dropdown w-dropdown"><div class="navbar11_dropdown-toggle w-dropdown-toggle"><div class="dropdown-icon w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
