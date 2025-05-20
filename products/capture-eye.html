@@ -99,9 +99,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 /* Make text look crisper and more legible in all browsers */
 body {
+  font-family: 'Space Grotesk', Arial, Helvetica, sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
@@ -170,6 +171,7 @@ a,
 	display: -webkit-box;
 	overflow: hidden;
 	-webkit-line-clamp: 3;
+	line-clamp: 3;
 	-webkit-box-orient: vertical;
 }
 
@@ -178,6 +180,7 @@ a,
 	display: -webkit-box;
 	overflow: hidden;
 	-webkit-line-clamp: 2;
+	line-clamp: 2;
 	-webkit-box-orient: vertical;
 }
 
@@ -337,6 +340,23 @@ margin: 0rem !important;
 body { overscroll-behavior: none; } 
 .page-wrapper { overflow: clip; }
 .action_bg { pointer-events: none; }
+
+/* Fix invalid CSS: remove !important from property values, add missing curly braces, and remove non-standard font-smoothing. */
+
+body {
+  font-family: 'Space Grotesk', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  /* font-smoothing: antialiased; */ /* Non-standard, removed */
+}
+
+a.custom-link {
+  color: #486cd9;
+  text-decoration: none;
+  font-size: 1.125rem;
+}
 
 </style></div><div data-animation="default" class="navbar9_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" data-w-id="e343666a-b2bd-6bde-60b4-1232bad22e55" role="banner" data-duration="400"><div class="navbar9_container"><a href="../index.html" class="navbar9_logo-link w-nav-brand"><img src="../assets/images/6478a21cf8143d8b5a3c13c2_Capture%20Log.svg" loading="lazy" alt="" class="navbar4_logo"></a><nav role="navigation" class="navbar9_menu w-nav-menu"><div class="navbar9_menu-left"><div data-hover="true" data-delay="300" data-w-id="0392d595-06f2-b308-abd6-b8ffbbdc0a88" class="navbar11_menu-dropdown w-dropdown"><div class="navbar11_dropdown-toggle w-dropdown-toggle"><div class="dropdown-icon w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"></path>
